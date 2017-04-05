@@ -1,0 +1,39 @@
+#main {
+  header {
+    background: url('images/main.jpg') no-repeat center center;
+    padding-top: 60px;
+    padding-bottom: 450px;
+
+    .shape {
+      background: rgba(255, 255, 255, 0.9);
+      width: 500px;
+      padding: 10px 20px;
+
+      p {
+        font-size: 20px;
+        line-height: 30px;
+
+        span {
+          color: #c22425;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  footer {
+    background: #d8d8d8;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    .parent {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .icon_block {
+      width: 200px;
+      text-align: center;
+    }
+  }
+}

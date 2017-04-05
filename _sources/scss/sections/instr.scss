@@ -1,0 +1,38 @@
+#instr {
+  background: url('images/instr.jpg') no-repeat center center;
+  background-size: 100% auto;
+  padding-top: 40px;
+  padding-bottom: 200px;
+
+  .shape {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    width: 800px;
+    margin: auto;
+  }
+
+  h3 {
+    color: #6d5c54;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  h4 {
+    color: #6d5c54;
+    font-size: 22px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 20px;
+
+    li {
+      color: #868685;
+      font-size: 20px;
+    }
+  }
+}

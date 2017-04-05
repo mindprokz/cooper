@@ -29,12 +29,12 @@ import FloatMenu from './floatMenu.js';
 //   });
 
 //Плавающее меню
-new FloatMenu({ 
-    elem : document.getElementById('navigation'), 
-    height : 200,
-    first_class : 'menu_fixed_on_top',
-    second_class : 'float_menu'
-  }).init();
+// new FloatMenu({
+//     elem : document.getElementById('navigation'),
+//     height : 200,
+//     first_class : 'menu_fixed_on_top',
+//     second_class : 'float_menu'
+//   }).init();
 
 
 // Отправка формы обратной связи скрипту для отправления по почте
@@ -44,5 +44,4 @@ let data = {
   telephone : 'input[name="telephone"]'
 };
 
-new SendFunc('application', data, 'mail');
-
+//new SendFunc('application', data, 'mail');

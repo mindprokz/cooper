@@ -1,0 +1,39 @@
+#reason {
+  background: url('images/reason.jpg') no-repeat center center;
+  padding-bottom: 50px;
+
+  h3 {
+    color: #6d5c54;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .text {
+    width: 50%;
+  }
+
+  img {
+    width: 50%;
+  }
+
+  h4 {
+    color: #6d5c54;
+    font-size: 22px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+
+  li {
+    color: #868685;
+    padding-bottom: 5px;
+  }
+}

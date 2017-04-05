@@ -1,0 +1,46 @@
+#review {
+  background: #ebebeb;
+  padding-top: 100px;
+  padding-bottom: 150px;
+
+  h3 {
+    text-align: center;
+    font-size: 35px;
+    color: #6d5c54;
+    padding-bottom: 30px;
+  }
+
+  h4 {
+    color: #868685;
+    text-align: center;
+    font-size: 22px;
+    padding-bottom: 10px;
+  }
+
+  .review_block {
+    padding-top: 80px;
+    width: 600px;
+    margin: auto;
+
+    .review_elem {
+      padding-bottom: 50px;
+
+      .name {
+        font-size: 20px;
+        color: #6d5c54;
+        padding-bottom: 5px;
+      }
+
+      .status {
+        color: #868685;
+        padding-bottom: 30px;
+      }
+
+      .text {
+        color: #868685;
+        font-size: 20px;
+        line-height: 18pt;
+      }
+    }
+  }
+}
