@@ -1,7 +1,11 @@
 #ex {
   background: url('images/ex_bg.jpg') no-repeat center center;
   background-size: cover;
-  height: 570px;
+  height: calc(100vh - 96px);
+
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
 
   .shape {
     width: 600px;
@@ -13,7 +17,7 @@
     margin-right: 80px;
 
     h3 {
-      color: #6d5c54;
+      color: #b0604a;
       font-size: 30px;
       padding-bottom: 15px;
     }
@@ -25,6 +29,10 @@
       &.padding {
         padding-bottom: 20px;
       }
+
+      &.last {
+        padding-top: 15px;
+      }
     }
 
     img {
@@ -35,7 +43,7 @@
     }
 
     .place {
-      background: #6d5c54;
+      background: #b0604a;
       color: #fff;
       padding: 10px;
       margin-top: 15px;

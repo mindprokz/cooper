@@ -1,7 +1,11 @@
 #bur {
   background: url('images/bur_bg.jpg') no-repeat center bottom;
   background-size: cover;
-  height: 570px;
+  height: calc(100vh - 96px);
+
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
 
   .shape {
     width: 600px;
@@ -13,7 +17,7 @@
     margin-right: 80px;
 
     h3 {
-      color: #6d5c54;
+      color: #b0604a;
       font-size: 30px;
       padding-bottom: 15px;
     }

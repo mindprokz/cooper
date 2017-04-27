@@ -1,12 +1,16 @@
 #reason {
   background: url('images/reason.jpg') no-repeat center center;
   padding-bottom: 50px;
+  padding-top: 20px;
+
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
 
   h3 {
-    color: #6d5c54;
+    color: #b0604a;
     font-size: 30px;
     text-align: center;
-    font-weight: 700;
     padding-top: 20px;
     padding-bottom: 40px;
   }
@@ -14,7 +18,7 @@
   .wrap {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .text {
@@ -22,18 +26,36 @@
   }
 
   img {
-    width: 50%;
+    width: 30%;
   }
 
   h4 {
     color: #6d5c54;
-    font-size: 22px;
+    font-size: 20px;
     padding-bottom: 20px;
     padding-top: 10px;
+
+    span {
+      color: #b0604a;
+    }
+  }
+
+  .list {
+    display: flex;
+  }
+
+  ul {
+    padding-left: 34px;
   }
 
   li {
     color: #868685;
     padding-bottom: 5px;
+    list-style-type: disc;
+    font-size: 17px;
+
+    span {
+      color: #b0604a;
+    }
   }
 }

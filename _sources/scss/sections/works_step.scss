@@ -1,12 +1,20 @@
 #steps {
-  background: #ebebeb;
-  padding-top: 100px;
+  background: #fff;
+  padding-top: 50px;
   padding-bottom: 150px;
 
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
+
+  &.work_steps {
+    padding-bottom: 0;
+  }
+
   h3 {
-    color: #6d5c54;
+    color: #b0604a;
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 15px;
   }
 
@@ -23,7 +31,7 @@
     list-style-type: decimal;
     width: 700px;
     margin: auto;
-    font-size: 20px;
+    font-size: 17px;
 
     li {
       color: #868685;
@@ -33,11 +41,12 @@
 
   .img_elems {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
 
     img {
-      width: 48%;
+      width: 400px;
+      margin: 0 25px;
     }
   }
 }

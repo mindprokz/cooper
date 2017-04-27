@@ -1,0 +1,47 @@
+#quality {
+  background: url('images/quality.jpg') no-repeat center center;
+  background-size: cover;
+  padding-top: 40px;
+  height: calc(100vh - 96px);
+
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
+
+  .shape {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 25px 30px;
+    width: 800px;
+    margin: auto;
+  }
+
+  h3 {
+    color: #b0604a;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  p {
+    color: #868685;
+    font-size: 17px;
+
+    &.pad_down {
+      padding-bottom: 50px;
+      text-align: center;
+    }
+  }
+
+  ul {
+    padding-bottom: 30px;
+    list-style-type: disc;
+    padding-left: 25px;
+    color: #868685;
+    font-size: 17px;
+    line-height: 15pt;
+
+    .head {
+      color: #868685;
+    }
+  }
+}

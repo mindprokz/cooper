@@ -1,0 +1,41 @@
+#map {
+  background: #ebebeb;
+
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
+
+  h3 {
+    color: #b0604a;
+    font-size: 30px;
+    text-align: center;
+    line-height: 25pt;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+
+  ul {
+    width: 700px;
+    margin: auto;
+    padding-bottom: 30px;
+
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: #868685;
+      font-size: 17px;
+
+      span {
+        color: #b0604a;
+      }
+    }
+  }
+
+  #map_main {
+    height: 400px;
+  }
+
+  img {
+    width: 100%;
+  }
+}

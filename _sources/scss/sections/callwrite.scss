@@ -1,0 +1,54 @@
+#modal_callwrite {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.close_modal {
+    display: none;
+  }
+
+  form {
+    background: #745d53;
+    width: 450px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    h3 {
+      color: #fff;
+      font-size: 25px;
+      padding-bottom: 15px;
+    }
+
+    input {
+      display: block;
+      width: 61%;
+      height: 35px;
+      margin: 15px auto;
+      font-size: 16px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #e12121;
+      color: #fff;
+      border: none;
+      padding: 10px 40px;
+      margin: 0 10px;
+      cursor: pointer;
+
+      &.closer {
+        background: transparent;
+        border: 2px solid #e12121;
+      }
+    }
+  }
+}

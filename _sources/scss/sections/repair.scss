@@ -1,0 +1,62 @@
+#repair {
+  background: url('images/repair_bg.jpg') no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 96px);
+
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
+
+  .shape {
+    width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+    margin-top: 30px;
+    float: right;
+    margin-right: 80px;
+
+    h3 {
+      color: #b0604a;
+      font-size: 30px;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      line-height: 25pt;
+    }
+
+    p {
+      color: #868685;
+      font-size: 17px;
+
+      &.padding {
+        padding-bottom: 20px;
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: -60%;
+      right: -14%;
+      width: 175px;
+    }
+
+    .place {
+      background: #b0604a;
+      color: #fff;
+      padding: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .list {
+      color: #868685;
+      font-size: 17px;
+      padding-bottom: 15px;
+
+      span {
+        color: #b0604a;
+      }
+    }
+  }
+}

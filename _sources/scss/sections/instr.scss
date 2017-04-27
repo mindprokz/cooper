@@ -1,26 +1,33 @@
 #instr {
   background: url('images/instr.jpg') no-repeat center center;
-  background-size: 100% auto;
+  background-size: cover;
   padding-top: 40px;
-  padding-bottom: 200px;
+  height: calc(100vh - 96px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
 
   .shape {
     background: rgba(255, 255, 255, 0.9);
     padding: 15px;
-    width: 800px;
+    width: 850px;
     margin: auto;
   }
 
   h3 {
-    color: #6d5c54;
-    font-size: 25px;
+    color: #b0604a;
+    font-size: 30px;
     text-align: center;
     padding-bottom: 25px;
   }
 
   h4 {
-    color: #6d5c54;
-    font-size: 22px;
+    color: #b0604a;
+    font-size: 25px;
     padding-top: 20px;
     padding-bottom: 15px;
   }
@@ -32,7 +39,8 @@
 
     li {
       color: #868685;
-      font-size: 20px;
+      font-size: 17px;
+      padding-bottom: 4px;
     }
   }
 }

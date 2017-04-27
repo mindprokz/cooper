@@ -1,4 +1,8 @@
 #steps {
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
+
   .steps_head {
     padding-bottom: 40px;
   }

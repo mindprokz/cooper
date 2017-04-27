@@ -1,40 +1,5 @@
 import SendFunc from './sendForm.js';
 import FloatMenu from './floatMenu.js';
-//   $(document).ready(function () {
-//     'use strict';
-// //Аякс отправка форм
-//     $("#application").submit(function () {
-//       var data = {
-//         name : document.querySelector('input[name="name"]').value,
-//         email : document.querySelector('input[name="email"]').value,
-//         telephone : document.querySelector('input[name="telephone"]').value
-//       };
-//       $.ajax({
-//         type: "POST",
-//         url: "mail.php",
-//         data: data
-//       }).done(function (value) {
-//         $('#mail')[0].innerHTML = value;
-//         $('#mail').removeClass('not_visible_mail');
-//         setTimeout(function () {
-//           $("#form").trigger("reset");
-//         }, 1000);
-//       });
-//     return false;
-//     });
-//  function  test() {
-// 	console.log('test!');
-// }
-//         $("img, a").on("dragstart", function (event) { event.preventDefault(); });
-//   });
-
-//Плавающее меню
-// new FloatMenu({
-//     elem : document.getElementById('navigation'),
-//     height : 200,
-//     first_class : 'menu_fixed_on_top',
-//     second_class : 'float_menu'
-//   }).init();
 
 
 // Отправка формы обратной связи скрипту для отправления по почте
@@ -45,3 +10,49 @@ let data = {
 };
 
 //new SendFunc('application', data, 'mail');
+
+
+ymaps.ready(init);
+var myMap,
+  myPlacemark;
+
+function init(){
+  myMap = new ymaps.Map("map_main", {
+    center: [49.807610, 73.102402],
+    zoom: 17
+  });
+
+  myMap.behaviors.disable(['drag','scrollZoom']);
+
+  myPlacemark = new ymaps.Placemark([49.807610, 73.102402], {
+    hintContent: 'Москва!',
+    balloonContent: 'Столица России'
+  }, {
+    iconLayout: 'default#image',
+    // Своё изображение иконки метки.
+    iconImageHref: 'images/map_icon.png',
+    // Размеры метки.
+    iconImageSize: [212, 103],
+    iconImageOffset: [-10, -50]
+  });
+
+  myMap.geoObjects.add(myPlacemark);
+}
+
+document.querySelector('#modal_callwrite .closer').addEventListener('click', e => {
+  e.preventDefault();
+  document.querySelector('#modal_callwrite').classList.add('close_modal');
+});
+
+document.querySelector('#menu header .number').addEventListener('click', e => {
+  document.querySelector('#modal_callwrite').classList.remove('close_modal');
+});
+
+
+// fancybox
+$(".fancybox").click(function() {
+	$(".fancybox").fancybox({
+		openEffect: 'fade',
+		closeEffect: 'fade'
+	});
+});

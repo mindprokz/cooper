@@ -1,25 +1,32 @@
 #team {
-  background: #ebebeb;
+  background: #fff;
   padding-top: 100px;
   padding-bottom: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
 
   h3,
   h4,
   h5 {
-    color: #6d5c54;
+    color: #b0604a;
   }
 
   h3 {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 25px;
     padding-bottom: 40px;
   }
 
   h5 {
-    font-size: 16px;
+    font-size: 17px;
     padding-top: 10px;
   }
 
@@ -28,11 +35,26 @@
     list-style-position: outside;
     padding-left: 15px;
     padding-bottom: 40px;
+    box-sizing: border-box;
+
+    @media (max-width: 1170px) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
 
     li {
-      color: #868685;
-      font-size: 20px;
+      color: #b0604a;
+      font-size: 17px;
       line-height: 20pt;
+      padding-bottom: 10px;
+
+      span {
+        color: #868685;
+
+        &.text {
+          color: #b0604a;
+        }
+      }
     }
   }
 
@@ -40,8 +62,14 @@
     display: flex;
     justify-content: space-around;
 
+    .icon_team {
+      width: 220px;
+      text-align: center;
+    }
+
     img {
       margin-bottom: 20px;
+      width: 60%;
     }
   }
 }

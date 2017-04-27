@@ -1,28 +1,33 @@
 #main {
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
+
   header {
     background: url('images/main.jpg') no-repeat center center;
-    padding-top: 60px;
-    padding-bottom: 450px;
+    padding-top: 30px;
+    padding-bottom: 480px;
 
     .shape {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0);
       width: 500px;
       padding: 10px 20px;
 
       p {
         font-size: 20px;
         line-height: 30px;
+        color: #fff;
 
         span {
-          color: #c22425;
           font-size: 22px;
+          color: #b0604a;
         }
       }
     }
   }
 
   footer {
-    background: #d8d8d8;
+    background: #ebebeb;
     padding-top: 20px;
     padding-bottom: 40px;
 
@@ -34,6 +39,14 @@
     .icon_block {
       width: 200px;
       text-align: center;
+
+      img {
+        width: 125px;
+      }
+
+      a {
+        display: block;
+      }
     }
   }
 }

@@ -1,0 +1,46 @@
+#complex {
+  background: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
+
+  h3 {
+    color: #b0604a;
+    font-size: 30px;
+    text-align: center;
+    line-height: 25pt;
+    padding-bottom: 40px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 400px;
+    }
+
+    .text {
+      padding-left: 25px;
+
+      .list {
+        font-size: 17px;
+        padding-bottom: 20px;
+        display: flex;
+
+        span {
+          color: #868685;
+        }
+
+        .text {
+          color: #b0604a;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}

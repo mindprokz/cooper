@@ -1,15 +1,33 @@
 #modif {
-  background: #ebebeb;
-  padding-top: 150px;
-  padding-bottom: 200px;
+  background: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (max-width: 1170px) {
+    width: 1170px;
+  }
+
+  h3 {
+    color: #b0604a;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 40px;
+  }
 
   .parent {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
 
   img {
-    width: 48%;
+    &.modif {
+      width: 300px;
+      margin-left: 25px;
+    }
+
+    &.table {
+      width: 500px;
+    }
   }
 }
