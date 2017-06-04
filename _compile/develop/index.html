@@ -10,12 +10,14 @@
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="libs/fancybox/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="libs/fancybox/source/jquery.fancybox.css"><!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5S664BQ');</script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
     <section id="menu">
       <header>
-        <div class="parent"><a href="/cooper"><img src="images/logo_.png"></a>
+        <div class="parent"><a href="/"><img src="images/logo_.png"></a>
           <nav><a href="drilling.html">бурение</a><a href="explosion.html">взрывные работы</a><a href="transportation.html">перевозка</a><a href="excavation.html">экскавация</a><a href="additional.html">дополнительные услуги</a></nav>
           <div class="number">
             <div class="button">+7 (7212) 922-927</div><span>заказать звонок</span>
@@ -40,7 +42,7 @@
             <h3>лицензии</h3><img src="images/main_icon_3.png"><a href="license.pdf" target="_blank">скачать</a>
           </div>
           <div class="icon_block">
-            <h3>подать заявку на услугу</h3><img src="images/main_icon_4.png"><a href="#test">рассчитать</a>
+            <h3>подать заявку на услугу</h3><img src="images/main_icon_4.png"><a id="calc_opener">рассчитать</a>
           </div>
         </div>
       </footer>
@@ -72,9 +74,9 @@
               <h4> бонусы и специальные низкие цены</h4>
             </div>
             <ul>
-              <li><span>БЕСПЛАТНО к горным контрактам:</span> питание и клининг управленческого состава клиента на карьерах</li>
+              <li><span>БЕСПЛАТНО к горным контрактам:</span> питание и клининг помещений для управленческого состава клиента на карьерах</li>
               <li><span>специальные низкие цены</span> на эксплуатационную разведку (RC бурение) при комплексных горных работах от 3.5 миллионов кубометров в год</li>
-              <li><span>БЕСПЛАТНО аудит карьера</span> и плана горных работ с рекомендациями о повышении</li>
+              <li><span>БЕСПЛАТНО аудит карьера</span> и плана горных работ с рекомендациями о повышении эффективности производства</li>
             </ul>
             <div class="list">
               <h4><span>4. </span></h4>
@@ -125,16 +127,16 @@
       <div class="parent">
         <h3>клиенты, высоко оценившие нашу работу</h3>
         <h4>В 2017г. заключены контракты на комплекс горных работ общим объемом более 11,3 млн. куб. м.</h4>
-        <div class="content"><a href="images/map.png" class="fancybox"><img src="images/map.png"></a>
+        <div class="content"><a href="images/map.png" class="fancybox"><img src="images/map.png">
+            <div class="icon"><span>увеличить</span><img src="images/search_icon.png" class="search_icon"></div></a>
           <div class="text">
-            <div class="list"><span>1.</span> RG Gold, месторождение райгородок</div>
+            <div class="list"><span>1.</span> Элеватормельстрой, месторождение Актогай Kaz Minerals</div>
             <div class="list"><span>2.</span> Шубарколь Премиум, угольный разрез Центральная 2</div>
-            <div class="list"><span>3.</span> Ер-тай, месторождение родниковое</div>
+            <div class="list"><span>3.</span> Ер-тай, месторождение Родниковое</div>
             <div class="list"><span>4.</span> БАСТ, месторождение Максут</div>
             <div class="list"><span>5.</span> AltynEX Company, месторождение Юбилейное</div>
-            <div class="list"><span>6.</span> Элеватормельстрой, месторождение Актогай</div>
-            <div class="list"><span>7.</span> Каратай К, месторождение Березники</div>
-            <div class="list"><span>8.</span> Eurasia Cooper Operating, месторождение Аяк-Коджан</div>
+            <div class="list"><span>6.</span> RG Gold, месторождение Райгородок</div>
+            <div class="list"><span>7.</span> Eurasia Cooper Operating, месторождение Аяк-Коджан</div>
           </div>
         </div>
       </div>
@@ -206,6 +208,12 @@
           <li><span>4.</span> обеспечиваем высочайшую <span>безопасность и устойчивость</span></li>
           <li><span>5.</span> десять лет опыта безопасной и эффективной работы</li>
         </ul>
+        <div class="contact_block"><img src="images/mining_logo_contact.png">
+          <h5>офис / факс: +7 (7212) 922-927</h5>
+          <h5>пр. Нуркена Абдирова 36/3</h5>
+          <h5>100017, Караганда, Казахстан</h5>
+          <h5>salemsg@eurasiacopper.kz</h5>
+        </div>
       </div>
       <!--img(src="images/map.png")-->
       <div id="map_main"></div>
@@ -220,6 +228,333 @@
         <button class="closer">закрыть</button>
       </form>
     </section>
+    <section class="calculator">
+      <div class="wrap">
+        <button id="closer_calc">закрыть</button>
+        <header>
+          <div data-value="bvr" class="tab">БВР</div>
+          <div data-value="45t" class="tab">Перевозка автосамосвал 45 т</div>
+          <div data-value="25t" class="tab">Перевозка автосамосвал 25 т</div>
+        </header>
+        <footer>
+          <div class="tab_content active"><img src="images/tab_1.png"><img src="images/tab_2.png"><img src="images/tab_3.png"></div>
+          <div data-value-id="45t" class="tab_content">
+            <div class="form">
+              <header>
+                <h3>расчет стоимости перевозок <br> автосамосвал 40-45 тонн</h3>
+                <div data-value="45t_form" class="button tab">свои параметры работ</div>
+              </header>
+              <footer>
+                <form>
+                  <div class="line">
+                    <h4>Общий объем, м3 в год</h4>
+                    <select id="V_45t" required>
+                      <option disabled selected>выбор из списка</option>
+                      <option>7 200 000</option>
+                      <option>5 000 000</option>
+                      <option>3 000 000</option>
+                    </select>
+                  </div>
+                  <div class="line">
+                    <h4>Емкость ковша, м3</h4>
+                    <select id="ALLV_45t" required>
+                      <option disabled selected>выбор из списка</option>
+                      <option>6.0</option>
+                      <option>4.7</option>
+                      <option>4.3</option>
+                      <option>4.2</option>
+                      <option>3.2</option>
+                      <option>2.8</option>
+                      <option>1.8</option>
+                    </select>
+                  </div>
+                  <div class="line">
+                    <h4>Расстояние откатки, км</h4>
+                    <select id="way_45t" required>
+                      <option disabled selected>выбор из списка</option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                  <div class="line">
+                    <h4>предварительная цена</h4>
+                    <input id="price_45t" type="text" disabled value="автоматический набор">
+                  </div>
+                  <button>рассчитать</button>
+                </form>
+              </footer>
+            </div>
+          </div>
+          <div data-value-id="25t" class="tab_content">
+            <div class="form">
+              <header>
+                <h3>расчет стоимости перевозок <br> автосамосвал 10-25 тонн</h3>
+                <div data-value="25t_form" class="button tab">свои параметры работ</div>
+              </header>
+              <footer>
+                <form>
+                  <div class="line">
+                    <h4>расстояние перевозок, км</h4>
+                    <select id="way_25t" required>
+                      <option disabled selected>выбор из списка</option>
+                      <option>до 3 км</option>
+                      <option>3-5 км</option>
+                      <option>5-10 км</option>
+                      <option>20-50 км</option>
+                      <option>50-100 км</option>
+                      <option>100-150 км</option>
+                      <option>150-200 км</option>
+                    </select>
+                  </div>
+                  <div class="line">
+                    <h4>грузоподъемность автосамосвала, тн</h4>
+                    <input id="gruz_25t" disabled placeholder="автоматический набор">
+                  </div>
+                  <div class="line">
+                    <h4>грузооборот в месяц</h4>
+                    <input id="month_25t" disabled placeholder="автоматический набор">
+                  </div>
+                  <div class="line">
+                    <h4>предварительная цена</h4>
+                    <input id="price_25t" type="text" disabled value="автоматический набор">
+                  </div>
+                  <button>рассчитать</button>
+                </form>
+              </footer>
+            </div>
+          </div>
+          <div data-value-id="bvr" class="tab_content">
+            <div class="form">
+              <header>
+                <h3>расчет буровзрывных работ</h3>
+                <div data-value="bvr_form" class="button tab">свои параметры работ</div>
+              </header>
+              <footer>
+                <form>
+                  <div class="line">
+                    <h4>крепость</h4>
+                    <select required id="krep">
+                      <option disabled selected>выбор из списка</option>
+                      <option>12-14</option>
+                      <option>14-18</option>
+                    </select>
+                  </div>
+                  <div class="line">
+                    <h4>сетка</h4>
+                    <select required id="grid">
+                      <option disabled selected>выбор из списка</option>
+                      <option>3,5*3,5</option>
+                      <option>4*4</option>
+                      <option>4,5*4,5</option>
+                    </select>
+                  </div>
+                  <div class="line">
+                    <h4>диаметр</h4>
+                    <select required id="dia">
+                      <option disabled selected>выбор из списка</option>
+                      <option>115</option>
+                      <option>165</option>
+                    </select>
+                  </div>
+                  <div class="line">
+                    <h4>Годовой объем, м3</h4>
+                    <input type="text" disabled value="от 5 000 000">
+                  </div>
+                  <div class="line">
+                    <h4>станок</h4>
+                    <select required id="serve">
+                      <option disabled selected>выбор из списка</option>
+                      <option>Kayshan</option>
+                      <option>Atlas Copca D 55-65</option>
+                    </select>
+                  </div>
+                  <div class="line">
+                    <h4>предварительная цена</h4>
+                    <input type="text" id="price_bvr" disabled value="автоматический набор">
+                  </div>
+                </form>
+                <button>рассчитать</button>
+              </footer>
+            </div>
+          </div>
+          <div data-value-id="bvr_form" class="tab_content bvr_form">
+            <div class="form">
+              <header>
+                <h3>расчет буровзрывных работ</h3>
+              </header>
+              <footer>
+                <form>
+                  <div class="line">
+                    <h4>крепость</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>сетка</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>диаметр</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>уступ</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>уд.расход</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>станок</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>цена</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                </form>
+                <div class="self_data">
+                  <div class="line">
+                    <input type="text" placeholder="имя">
+                  </div>
+                  <div class="line">
+                    <input type="text" placeholder="название организации">
+                  </div>
+                  <div class="line">
+                    <input type="num" placeholder="телефон">
+                  </div>
+                  <div class="line">
+                    <input type="mail" placeholder="email">
+                  </div>
+                  <div class="line">
+                    <label>
+                      <div class="button">прикрепить техническое задание</div>
+                      <input type="file" onchange="this.previousSibling.previousSibling.innerHTML = this.files[0].name">
+                    </label>
+                  </div>
+                  <div class="line">
+                    <input type="submit" value="отправить" class="standart">
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+          <div data-value-id="25t_form" class="tab_content rest_form">
+            <div class="form">
+              <header>
+                <h3>расчет стоимости перевозок <br> автосамосвал 10-25 тонн <br> (рудовоз/автопоезд с прицепом)</h3>
+              </header>
+              <footer>
+                <form>
+                  <div class="line">
+                    <h4>расстояние перевозок, км</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>грузоподъемность автосамосвала, тн</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>грузооборот в месяц в м3/км <br> до 100 000 м3/км</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>минимальная цена</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                </form>
+                <div class="self_data">
+                  <div class="column">
+                    <div class="line">
+                      <input type="text" placeholder="имя">
+                    </div>
+                    <div class="line">
+                      <input type="text" placeholder="название организации">
+                    </div>
+                    <div class="line">
+                      <input type="num" placeholder="телефон">
+                    </div>
+                  </div>
+                  <div class="column column_2">
+                    <div class="line">
+                      <input type="mail" placeholder="email">
+                    </div>
+                    <div class="line">
+                      <label>
+                        <div class="button">прикрепить техническое задание</div>
+                        <input type="file" onchange="this.previousSibling.previousSibling.innerHTML = this.files[0].name">
+                      </label>
+                    </div>
+                    <div class="line">
+                      <input type="submit" value="отправить" class="standart">
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+          <div data-value-id="45t_form" class="tab_content rest_form">
+            <div class="form">
+              <header>
+                <h3>расчет стоимости перевозок <br> автосамосвал 10-25 тонн <br> (рудовоз/автопоезд с прицепом)</h3>
+              </header>
+              <footer>
+                <form>
+                  <div class="line">
+                    <h4>расстояние перевозок, км</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>грузоподъемность автосамосвала, тн</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>грузооборот в месяц в м3/км <br> до 100 000 м3/км</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                  <div class="line">
+                    <h4>минимальная цена</h4>
+                    <input type="text" placeholder="введите параметры">
+                  </div>
+                </form>
+                <div class="self_data">
+                  <div class="column">
+                    <div class="line">
+                      <input type="text" placeholder="имя">
+                    </div>
+                    <div class="line">
+                      <input type="text" placeholder="название организации">
+                    </div>
+                    <div class="line">
+                      <input type="num" placeholder="телефон">
+                    </div>
+                  </div>
+                  <div class="column column_2">
+                    <div class="line">
+                      <input type="mail" placeholder="email">
+                    </div>
+                    <div class="line">
+                      <label>
+                        <div class="button">прикрепить техническое задание</div>
+                        <input type="file" onchange="this.previousSibling.previousSibling.innerHTML = this.files[0].name">
+                      </label>
+                    </div>
+                    <div class="line">
+                      <input type="submit" value="отправить" class="standart">
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+    <div id="mail" class="not_visible_mail"></div>
+    <script>window.main = true</script><!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q5KPLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript><!-- End Google Tag Manager (noscript) -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/fancybox/source/jquery.fancybox.pack.js"></script>

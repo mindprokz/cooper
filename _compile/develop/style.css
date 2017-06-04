@@ -161,7 +161,10 @@ body {
     #main footer .icon_block img {
       width: 125px; }
     #main footer .icon_block a {
-      display: block; }
+      display: block;
+      cursor: pointer;
+      color: #497aef;
+      text-decoration: underline; }
 
 #reason {
   background: url("images/reason.jpg") no-repeat center center;
@@ -368,13 +371,16 @@ body {
     #bum2 {
       width: 1170px; } }
   #bum2 .shape {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px 25px;
-    width: 800px;
+    width: 900px;
     margin: auto; }
+  #bum2 h2 {
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding-bottom: 25px; }
   #bum2 h3 {
-    color: #b0604a;
-    font-size: 30px;
+    color: #fff;
+    font-size: 80px;
     text-align: center;
     padding-bottom: 25px; }
   #bum2 h4 {
@@ -387,7 +393,8 @@ body {
     justify-content: space-between; }
   #bum2 ul {
     list-style-position: outside;
-    padding-left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 25px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -402,7 +409,8 @@ body {
       #bum2 ul li .num {
         padding-right: 15px;
         color: #b0604a;
-        box-sizing: border-box; }
+        box-sizing: border-box;
+        width: 30px; }
         #bum2 ul li .num.last {
           padding-right: 7px; }
 
@@ -570,7 +578,7 @@ body {
     #trans {
       width: 1170px; } }
   #trans .shape {
-    width: 600px;
+    width: 700px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);
     position: relative;
@@ -580,7 +588,7 @@ body {
     #trans .shape h3 {
       color: #b0604a;
       font-size: 30px;
-      padding-bottom: 15px;
+      padding-bottom: 35px;
       padding-top: 15px;
       line-height: 25pt; }
     #trans .shape p {
@@ -609,7 +617,7 @@ body {
     #trans_dan {
       width: 1170px; } }
   #trans_dan .shape {
-    width: 600px;
+    width: 800px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);
     position: relative;
@@ -874,6 +882,17 @@ body {
     align-items: center; }
     #clients .content img {
       width: 400px; }
+    #clients .content .fancybox {
+      position: relative; }
+    #clients .content .icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center; }
+    #clients .content .search_icon {
+      width: 32px; }
     #clients .content .text {
       color: #868685;
       padding-left: 25px; }
@@ -902,7 +921,7 @@ body {
     line-height: 25pt;
     padding-bottom: 40px; }
   #equip_table img {
-    width: 500px; }
+    width: 700px; }
 
 #tech {
   background: #fff;
@@ -947,7 +966,8 @@ body {
     width: 700px; }
 
 #map {
-  background: #ebebeb; }
+  background: #ebebeb;
+  position: relative; }
   @media (max-width: 1170px) {
     #map {
       width: 1170px; } }
@@ -973,6 +993,18 @@ body {
     height: 400px; }
   #map img {
     width: 100%; }
+  #map .contact_block {
+    position: absolute;
+    right: 30px;
+    top: 350px;
+    z-index: 10;
+    background: #006532;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 10px; }
+    #map .contact_block h5 {
+      padding-bottom: 5px; }
 
 #modal_callwrite {
   position: fixed;
@@ -1015,3 +1047,182 @@ body {
       #modal_callwrite form button.closer {
         background: transparent;
         border: 2px solid #e12121; }
+
+.calculator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none; }
+  .calculator.active {
+    display: flex; }
+  .calculator .wrap {
+    width: 800px;
+    background: #fff;
+    margin: auto;
+    padding-bottom: 20px;
+    border-radius: 20px; }
+    .calculator .wrap #closer_calc {
+      margin-top: 25px;
+      background: url("images/button_bg.jpg");
+      background-size: contain;
+      border-radius: 10px;
+      color: #fff;
+      border: 0;
+      float: right;
+      margin-right: 30px;
+      padding: 10px 20px; }
+  .calculator header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px; }
+    .calculator header .tab {
+      width: 30%;
+      height: 50px;
+      background: url("images/tab_bg.jpg");
+      background-size: contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      color: #fff;
+      cursor: pointer; }
+      .calculator header .tab.active {
+        background: url("images/tab_active_bg.jpg"); }
+  .calculator footer {
+    padding-top: 10px; }
+    .calculator footer button {
+      background: url("images/button_bg.jpg");
+      background-size: contain;
+      border-radius: 10px;
+      color: #fff;
+      border: 0;
+      float: right;
+      padding: 10px 20px; }
+    .calculator footer .tab_content {
+      display: none;
+      width: 100%; }
+      .calculator footer .tab_content.bvr_form .form footer form {
+        width: 60%;
+        float: left; }
+      .calculator footer .tab_content.active {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start; }
+        .calculator footer .tab_content.active img {
+          width: 30%; }
+      .calculator footer .tab_content .form {
+        width: 100%; }
+        .calculator footer .tab_content .form header {
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-start; }
+          .calculator footer .tab_content .form header h3 {
+            color: #b0604a;
+            font-size: 30px; }
+          .calculator footer .tab_content .form header .button {
+            background: url("images/button_bg.jpg");
+            background-size: contain;
+            border-radius: 10px;
+            color: #fff;
+            width: 200px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 8px; }
+        .calculator footer .tab_content .form footer,
+        .calculator footer .tab_content .form .self_data {
+          width: 100%; }
+          .calculator footer .tab_content .form footer .line,
+          .calculator footer .tab_content .form .self_data .line {
+            width: 100%;
+            height: 55px;
+            padding-left: 50px;
+            padding-right: 50px;
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative; }
+            .calculator footer .tab_content .form footer .line h4,
+            .calculator footer .tab_content .form .self_data .line h4 {
+              color: #8d191d;
+              font-size: 25px;
+              float: left; }
+            .calculator footer .tab_content .form footer .line select,
+            .calculator footer .tab_content .form footer .line input:not(.standart),
+            .calculator footer .tab_content .form .self_data .line select,
+            .calculator footer .tab_content .form .self_data .line input:not(.standart) {
+              float: right;
+              width: 210px;
+              height: 35px;
+              padding-left: 10px;
+              box-sizing: border-box;
+              border: 2px solid #818181;
+              border-radius: 5px; }
+            .calculator footer .tab_content .form footer .line label .button,
+            .calculator footer .tab_content .form .self_data .line label .button {
+              float: right;
+              width: 210px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #fff;
+              background: url("images/butt_send_bg.png") no-repeat;
+              font-size: 13px;
+              background-size: contain;
+              box-sizing: border-box;
+              border-radius: 5px;
+              cursor: pointer; }
+            .calculator footer .tab_content .form footer .line label input,
+            .calculator footer .tab_content .form .self_data .line label input {
+              visibility: hidden; }
+            .calculator footer .tab_content .form footer .line input[type="submit"],
+            .calculator footer .tab_content .form .self_data .line input[type="submit"] {
+              float: right;
+              width: 210px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #fff;
+              background: url("images/butt_send_bg.png") no-repeat;
+              font-size: 13px;
+              background-size: contain;
+              border: 0;
+              box-sizing: border-box;
+              border-radius: 5px;
+              cursor: pointer; }
+              .calculator footer .tab_content .form footer .line input[type="submit"]:active,
+              .calculator footer .tab_content .form .self_data .line input[type="submit"]:active {
+                outline: none; }
+          .calculator footer .tab_content .form footer button,
+          .calculator footer .tab_content .form .self_data button {
+            background: url("images/button_bg.jpg");
+            background-size: contain;
+            border-radius: 10px;
+            color: #fff;
+            border: 0;
+            float: right;
+            margin-right: 50px;
+            padding: 10px 20px; }
+        .calculator footer .tab_content .form .self_data {
+          float: right;
+          width: 40%; }
+    .calculator footer .rest_form .form footer .self_data {
+      width: 100%;
+      display: flex;
+      justify-content: space-around; }
+    .calculator footer .rest_form .form footer .column {
+      width: 50%; }
+      .calculator footer .rest_form .form footer .column .line input,
+      .calculator footer .rest_form .form footer .column .line select {
+        float: none !important; }
+      .calculator footer .rest_form .form footer .column.column_2 .line input,
+      .calculator footer .rest_form .form footer .column.column_2 .line select {
+        float: right !important; }

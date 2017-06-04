@@ -31,6 +31,23 @@
       width: 400px;
     }
 
+    .fancybox {
+      position: relative;
+    }
+
+    .icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .search_icon {
+      width: 32px;
+    }
+
     .text {
       color: #868685;
       padding-left: 25px;

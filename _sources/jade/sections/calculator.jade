@@ -1,11 +1,233 @@
 section.calculator
   .wrap
+    button#closer_calc закрыть
     header
-      .tab.active БВР
-      .tab Перевозка автосамосвал 45 т
-      .tab Перевозка автосамосвал 25 т
+      .tab(data-value="bvr") БВР
+      .tab(data-value="45t") Перевозка автосамосвал 45 т
+      .tab(data-value="25t") Перевозка автосамосвал 25 т
     footer
-      .tab_content
-        select
-          option 
+      .tab_content.active
+        img(src="images/tab_1.png")
+        img(src="images/tab_2.png")
+        img(src="images/tab_3.png")
+      .tab_content(data-value-id="45t")
+        .form
+          header
+            h3!="расчет стоимости перевозок <br> автосамосвал 40-45 тонн"
+            .button.tab(data-value="45t_form") свои параметры работ
+          footer
+            form
+              .line
+                h4 Общий объем, м3 в год
+                select(id="V_45t" required)
+                  option(disabled selected) выбор из списка
+                  option 7 200 000
+                  option 5 000 000
+                  option 3 000 000
+              .line
+                h4 Емкость ковша, м3
+                select(id="ALLV_45t" required)
+                  option(disabled selected) выбор из списка
+                  option 6.0
+                  option 4.7
+                  option 4.3
+                  option 4.2
+                  option 3.2
+                  option 2.8
+                  option 1.8
+              .line
+                h4 Расстояние откатки, км
+                select(id="way_45t" required)
+                  option(disabled selected) выбор из списка
+                  option 1
+                  option 2
+              .line
+                h4 предварительная цена
+                input(id="price_45t" type="text" disabled value="автоматический набор")
+              button рассчитать
+      .tab_content(data-value-id="25t")
+        .form
+          header
+            h3!="расчет стоимости перевозок <br> автосамосвал 10-25 тонн"
+            .button.tab(data-value="25t_form") свои параметры работ
+          footer
+            form
+              .line
+                h4 расстояние перевозок, км
+                select(id="way_25t" required)
+                  option(disabled selected) выбор из списка
+                  option до 3 км
+                  option 3-5 км
+                  option 5-10 км
+                  option 20-50 км
+                  option 50-100 км
+                  option 100-150 км
+                  option 150-200 км
+              .line
+                h4 грузоподъемность автосамосвала, тн
+                input(id="gruz_25t" disabled placeholder="автоматический набор")
+              .line
+                h4!="грузооборот в месяц"
+                input(id="month_25t" disabled placeholder="автоматический набор")
+              .line
+                h4 предварительная цена
+                input(id="price_25t" type="text" disabled value="автоматический набор")
+              button рассчитать
+      .tab_content(data-value-id="bvr")
+        .form
+          header
+            h3!="расчет буровзрывных работ"
+            .button.tab(data-value="bvr_form") свои параметры работ
+          footer
+            form
+              .line
+                h4 крепость
+                select(required id="krep")
+                  option(disabled selected) выбор из списка
+                  option 12-14
+                  option 14-18
+              .line
+                h4 сетка
+                select(required id="grid")
+                  option(disabled selected) выбор из списка
+                  option 3,5*3,5
+                  option 4*4
+                  option 4,5*4,5
+              .line
+                h4 диаметр
+                select(required id="dia")
+                  option(disabled selected) выбор из списка
+                  option 115
+                  option 165
+              //- .line
+              //-   h4 уступ
+              //-   input(type="text" disabled value="5")
+              //- .line
+              //-   h4 уд.расход
+              //-   input(type="text" disabled value="0.66")
+              .line
+                h4 Годовой объем, м3
+                input(type="text" disabled value="от 5 000 000")
+              .line
+                h4 станок
+                select(required id="serve")
+                  option(disabled selected) выбор из списка
+                  option Kayshan
+                  option Atlas Copca D 55-65
+              .line
+                h4 предварительная цена
+                input(type="text" id="price_bvr" disabled value="автоматический набор")
+            button рассчитать
+      .tab_content.bvr_form(data-value-id="bvr_form")
+        .form
+          header
+            h3!="расчет буровзрывных работ"
+          footer
+            form
+              .line
+                h4 крепость
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4 сетка
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4 диаметр
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4 уступ
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4 уд.расход
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4 станок
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4 цена
+                input(type="text" placeholder="введите параметры")
+            .self_data
+              .line
+                input(type="text" placeholder="имя")
+              .line
+                input(type="text" placeholder="название организации")
+              .line
+                input(type="num" placeholder="телефон")
+              .line
+                input(type="mail" placeholder="email")
+              .line
+                label
+                  .button прикрепить техническое задание
+                  input(type="file" onchange="this.previousSibling.previousSibling.innerHTML = this.files[0].name")
+              .line
+                input(type="submit" value="отправить").standart
+      .tab_content.rest_form(data-value-id="25t_form")
+        .form
+          header
+            h3!="расчет стоимости перевозок <br> автосамосвал 10-25 тонн <br> (рудовоз/автопоезд с прицепом)"
+          footer
+            form
+              .line
+                h4 расстояние перевозок, км
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4 грузоподъемность автосамосвала, тн
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4!="грузооборот в месяц в м3/км <br> до 100 000 м3/км"
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4 минимальная цена
+                input(type="text" placeholder="введите параметры")
+            .self_data
+              .column
+                .line
+                  input(type="text" placeholder="имя")
+                .line
+                  input(type="text" placeholder="название организации")
+                .line
+                  input(type="num" placeholder="телефон")
+              .column.column_2
+                .line
+                  input(type="mail" placeholder="email")
+                .line
+                  label
+                    .button прикрепить техническое задание
+                    input(type="file" onchange="this.previousSibling.previousSibling.innerHTML = this.files[0].name")
+                .line
+                  input(type="submit" value="отправить").standart
+      .tab_content.rest_form(data-value-id="45t_form")
+        .form
+          header
+            h3!="расчет стоимости перевозок <br> автосамосвал 10-25 тонн <br> (рудовоз/автопоезд с прицепом)"
+          footer
+            form
+              .line
+                h4 расстояние перевозок, км
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4 грузоподъемность автосамосвала, тн
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4!="грузооборот в месяц в м3/км <br> до 100 000 м3/км"
+                input(type="text" placeholder="введите параметры")
+              .line
+                h4 минимальная цена
+                input(type="text" placeholder="введите параметры")
+            .self_data
+              .column
+                .line
+                  input(type="text" placeholder="имя")
+                .line
+                  input(type="text" placeholder="название организации")
+                .line
+                  input(type="num" placeholder="телефон")
+              .column.column_2
+                .line
+                  input(type="mail" placeholder="email")
+                .line
+                  label
+                    .button прикрепить техническое задание
+                    input(type="file" onchange="this.previousSibling.previousSibling.innerHTML = this.files[0].name")
+                .line
+                  input(type="submit" value="отправить").standart
   

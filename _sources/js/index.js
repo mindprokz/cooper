@@ -1,5 +1,7 @@
 import SendFunc from './sendForm.js';
 import FloatMenu from './floatMenu.js';
+import Calc from './calculator.js';
+import modal_feed from './modal_feed.js';
 
 
 // Отправка формы обратной связи скрипту для отправления по почте
@@ -10,44 +12,13 @@ let data = {
 };
 
 //new SendFunc('application', data, 'mail');
-
-
-ymaps.ready(init);
-var myMap,
-  myPlacemark;
-
-function init(){
-  myMap = new ymaps.Map("map_main", {
-    center: [49.807610, 73.102402],
-    zoom: 17
+if (document.querySelector('#menu header .number')) {
+  document.querySelector('#menu header .number').addEventListener('click', e => {
+    document.querySelector('#modal_callwrite').classList.remove('close_modal');
   });
 
-  myMap.behaviors.disable(['drag','scrollZoom']);
-
-  myPlacemark = new ymaps.Placemark([49.807610, 73.102402], {
-    hintContent: 'Москва!',
-    balloonContent: 'Столица России'
-  }, {
-    iconLayout: 'default#image',
-    // Своё изображение иконки метки.
-    iconImageHref: 'images/map_icon.png',
-    // Размеры метки.
-    iconImageSize: [212, 103],
-    iconImageOffset: [-10, -50]
-  });
-
-  myMap.geoObjects.add(myPlacemark);
+  modal_feed();
 }
-
-document.querySelector('#modal_callwrite .closer').addEventListener('click', e => {
-  e.preventDefault();
-  document.querySelector('#modal_callwrite').classList.add('close_modal');
-});
-
-document.querySelector('#menu header .number').addEventListener('click', e => {
-  document.querySelector('#modal_callwrite').classList.remove('close_modal');
-});
-
 
 // fancybox
 $(".fancybox").click(function() {
@@ -56,3 +27,27 @@ $(".fancybox").click(function() {
 		closeEffect: 'fade'
 	});
 });
+
+
+if (window.main === true) {
+  Calc();
+
+  ymaps.ready(init);
+  var myMap,
+    myPlacemark;
+
+  function init(){
+    myMap = new ymaps.Map("map_main", {
+      center: [49.807610, 73.102402],
+      zoom: 17
+    });
+
+    myMap.behaviors.disable(['drag','scrollZoom']);
+
+    myPlacemark = new ymaps.Placemark([49.807610, 73.102402], {
+      hintContent: 'Mining service'
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+  }
+}
